@@ -1,5 +1,4 @@
 import { Controller, Get } from '@nestjs/common';
-import path from 'path';
 
 @Controller()
 export class IndexController {
@@ -7,6 +6,6 @@ export class IndexController {
 
   @Get()
   index() {
-    return { message: 'Hello World' };
+    return { message: 'Hello World', login_path: '/v1/auth/sso/saml/login' };
   }
 }
