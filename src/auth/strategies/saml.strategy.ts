@@ -17,6 +17,7 @@ export class SamlStrategy extends PassportStrategy(Strategy, 'saml') {
       entryPoint:
         'https://arif-dev.onelogin.com/trust/saml2/http-post/sso/8b3f00a8-493e-4398-9bc3-bc7530207cb7',
       wantAssertionsSigned: true,
+      wantAuthnResponseSigned: false,
 
       // Okta configuration
       // issuer: 'http://www.okta.com/exk9znm8tnJItiDkA5d7',
