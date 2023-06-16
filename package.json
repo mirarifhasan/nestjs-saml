@@ -24,8 +24,8 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/passport": "^9.0.3",
     "@nestjs/platform-express": "^9.0.0",
+    "@node-saml/passport-saml": "^4.0.4",
     "morgan": "^1.10.0",
-    "passport-saml": "^3.2.4",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
