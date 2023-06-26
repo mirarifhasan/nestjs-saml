@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Req, Res, UseGuards } from '@nestjs/common';
 import { SamlAuthGuard } from 'src/guards/saml-auth.guard';
 
 @Controller({ path: 'auth', version: '1' })
@@ -15,9 +15,11 @@ export class AuthController {
 
   @Post('sso/saml/callback')
   @UseGuards(SamlAuthGuard)
-  samlCallback(@Req() req: Request) {
+  samlCallback(@Req() req: any, @Res() res: any) {
     console.log('===============', 'callback controller');
     console.log('===============', req);
+    console.log('===============', req.body.RelayState);
+
     return { message: 'Hello SAML Callback!' };
   }
 
